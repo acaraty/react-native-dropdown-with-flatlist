@@ -65,6 +65,8 @@ export default class ModalDropdown extends Component {
     renderButtonText: PropTypes.func,
     onDropdownWillShow: PropTypes.func,
     onDropdownWillHide: PropTypes.func,
+    onEndReachedThreshold: PropTypes.func,
+    onEndReached: PropTypes.func,
     onSelect: PropTypes.func
   };
   static defaultProps = {
@@ -274,6 +276,8 @@ export default class ModalDropdown extends Component {
       renderSeparator,
       showsVerticalScrollIndicator,
       keyboardShouldPersistTaps,
+      onEndReachedThreshold,
+      onEndReached,
       options
     } = this.props;
     return (
@@ -287,6 +291,8 @@ export default class ModalDropdown extends Component {
         automaticallyAdjustContentInsets={false}
         showsVerticalScrollIndicator={showsVerticalScrollIndicator}
         keyboardShouldPersistTaps={keyboardShouldPersistTaps}
+        onEndReachedThreshold={onEndReachedThreshold}
+        onEndReached={onEndReached}
       />
     );
   }
